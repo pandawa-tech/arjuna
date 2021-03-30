@@ -1,36 +1,21 @@
 {
   "name": "arjuna",
   "version": "0.1.0",
-  "description": "A math problem solver chatbot",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index",
-    "start:prod": "node index"
+    "dev": "bottender dev",
+    "lint": "eslint . ",
+    "start": "bottender start",
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/priambudiLB/Arjuna.git"
-  },
-  "keywords": [
-    "math",
-    "chatbot",
-    "javascript",
-    "nodejs",
-    "node"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/priambudiLB/Arjuna/issues"
-  },
-  "homepage": "https://github.com/priambudiLB/Arjuna#readme",
   "dependencies": {
-    "bottender": "^1.5.1-alpha.9",
-    "compression": "^1.7.4",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "helmet": "^4.4.1",
-    "nodemon": "^2.0.7"
+    "bottender": "1.5.1-alpha.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
   }
 }

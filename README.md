@@ -1,3 +1,6 @@
+<p align="center">
+  <img alt="Gatsby" src="../Arjuna/assets/arjuna.svg" width="60" />
+</p>
 <h1 align="center">
   Arjuna
 </h1>
@@ -7,17 +10,15 @@
   </strong>
 </p>
 <h2 align="center">
-  <a href="https://www.gatsbyjs.com/docs/">Quickstart</a>
+  <a href="#quickstart">Quickstart</a>
   <span> · </span>
-  <a href="https://www.gatsbyjs.com/tutorial/">Tutorial</a>
-  <span> · </span>
-  <a href="https://www.gatsbyjs.com/plugins/">Plugins</a>
-  <span> · </span>
-  <a href="https://www.gatsbyjs.com/starters/">Starters</a>
-  <span> · </span>
-  <a href="https://www.gatsbyjs.com/showcase/">Showcase</a>
-  <span> · </span>
-  <a href="https://www.gatsbyjs.com/contributing/how-to-contribute/">Contribute</a>
+  <a href="#contribute">Contribute</a>
 </h2>
 
-<a href="https://www.vecteezy.com/free-vector/decorative">Decorative Vectors by Vecteezy</a>
+## Quickstart
+``` bash
+docker build --no-cache -t arjuna .
+docker run arjuna
+```
+
+<a href="https://www.vecteezy.com/free-vector/decorative">Logo vector by Vecteezy</a>
