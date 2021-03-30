@@ -17,8 +17,14 @@
 
 ## Quickstart
 ``` bash
-docker build --no-cache -t arjuna .
-docker run arjuna
+# docker
+docker build -t arjuna .     # build image
+docker run arjuna            # run image (using 'start' script)
+
+# node js
+yarn                         # install packages
+yarn dev                     # with ngrok
+yarn start                   # without ngrok
 ```
 
 <a href="https://www.vecteezy.com/free-vector/decorative">Logo vector by Vecteezy</a>

@@ -29,7 +29,7 @@ FROM node:10-alpine
 
 WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app/node_modules ./node_modules
-COPY --from=builder /usr/src/app/package.json .
+COPY . .
 
 EXPOSE 3000
 
