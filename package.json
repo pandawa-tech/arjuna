@@ -1,0 +1,36 @@
+{
+  "name": "arjuna",
+  "version": "0.1.0",
+  "description": "A math problem solver chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index",
+    "start:prod": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priambudiLB/Arjuna.git"
+  },
+  "keywords": [
+    "math",
+    "chatbot",
+    "javascript",
+    "nodejs",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/priambudiLB/Arjuna/issues"
+  },
+  "homepage": "https://github.com/priambudiLB/Arjuna#readme",
+  "dependencies": {
+    "bottender": "^1.5.1-alpha.9",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "nodemon": "^2.0.7"
+  }
+}
