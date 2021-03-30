@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Gatsby" src="../Arjuna/assets/arjuna.svg" width="60" />
+  <img alt="Arjuna" src="https://raw.githubusercontent.com/priambudiLB/Arjuna/main/assets/arjuna.svg" width="60" />
 </p>
 <h1 align="center">
   Arjuna
