@@ -35,5 +35,5 @@ jobs:
         with:
           push: true
           tags: |
-            arjuna-chatbot/arjuna:${{ github.sha }}
-            arjuna-chatbot/arjuna:latest
+            ghcr.io/arjuna-chatbot/arjuna:latest
+            ghcr.io/arjuna-chatbot/arjuna:${{ github.sha }}
