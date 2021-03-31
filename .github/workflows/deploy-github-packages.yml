@@ -12,11 +12,26 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
         with:
+          platforms: all
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to Registry
+        uses: docker/login-action@v1
+        with:
+          registry: docker.pkg.github.com
           username: ${{ github.actor }}
           password: ${{ secrets.CR_PAT }}
-          registry: docker.pkg.github.com
-          repository: arjuna-chatbot/arjuna/arjuna
-          tag_with_ref: true
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: ${{ runner.os }}-buildx-
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: arjuna-chatbot/arjuna/arjuna:${{ env.IMAGE_TAG }}
