@@ -10,16 +10,16 @@ RUN apk update && apk add --no-cache git ca-certificates && update-ca-certificat
 COPY . /usr/src/app
 
 # Build the binary
-RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/arjuna
+# RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/arjuna
 
 FROM alpine:3.13.2
 
 # Import from builder.
-COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+# COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 # Copy our static executable
-COPY --from=builder /go/bin/arjuna /go/bin/arjuna
+# COPY --from=builder /go/bin/arjuna /go/bin/arjuna
 
 EXPOSE 8080
 # Run the arjuna binary.
-ENTRYPOINT ["/go/bin/arjuna"]
+# ENTRYPOINT ["/go/bin/arjuna"]
