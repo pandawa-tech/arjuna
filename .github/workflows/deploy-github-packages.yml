@@ -34,4 +34,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: arjuna-chatbot/arjuna/arjuna:${{ env.IMAGE_TAG }}
+          tags: |
+            arjuna-chatbot/arjuna:${{ github.sha }}
+            arjuna-chatbot/arjuna:latest
