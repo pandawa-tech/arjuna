@@ -14,8 +14,6 @@ COPY . /usr/src/app
 
 FROM alpine:3.13.2
 
-LABEL org.opencontainers.image.source="https://github.com/arjuna-chatbot"
-
 # Import from builder.
 # COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
