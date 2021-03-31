@@ -13,7 +13,7 @@ jobs:
           docker build --no-cache -f Dockerfile.production .
   deploy-heroku:
     runs-on: ubuntu-latest
-    needs: [test]
+    needs: [test-build]
     steps:
       - name: Checking out the repository
         uses: actions/checkout@v2
