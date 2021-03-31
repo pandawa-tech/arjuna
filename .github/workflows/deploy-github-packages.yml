@@ -18,22 +18,17 @@ jobs:
           platforms: all
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      - name: Login to Registry
-        uses: docker/login-action@v1
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1 
         with:
-          registry: docker.pkg.github.com
-          username: ${{ github.actor }}
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
-      - name: Cache Docker layers
-        uses: actions/cache@v2
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: ${{ runner.os }}-buildx-
-      - name: Push to GitHub Packages
+      - name: Build and push
         uses: docker/build-push-action@v2
         with:
+          context: .
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
             ghcr.io/arjuna-chatbot/arjuna:latest
-            ghcr.io/arjuna-chatbot/arjuna:${{ github.sha }}
