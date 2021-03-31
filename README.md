@@ -5,11 +5,9 @@
   <a href="https://github.com/arjuna-chatbot/arjuna/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Arjuna is released under the MIT license." />
   </a>
-
   <a href="https://github.com/arjuna-chatbot/arjuna/actions/workflows/deploy-heroku.yml">
-  <img alt="Workflow" src="https://github.com/arjuna-chatbot/arjuna/workflows/Deploy/badge.svg">
+  <img alt="Workflow" src="https://github.com/arjuna-chatbot/arjuna/actions/workflows/deploy-heroku.yml/badge.svg">
   </a>
-
   <img alt="Code Factor" src="https://www.codefactor.io/repository/github/arjuna-chatbot/arjuna/badge">
 </p>
 <h1 align="center">
@@ -41,21 +39,12 @@ There are 2 ways to get Arjuna up and running:
   ```
   
 
-
-2. **With Package Manager (yarn)**
+2. **With Go**
   
-  Install packages
+  Run
   ```shell
-    yarn
+    go run main.go
   ```
-  Start with ngrok
-  ```shell
-    yarn dev
-  ```
-  or, start without ngrok
-   ```shell
-    yarn start
-   ```
 
 <h2 id="license"><img alt="Arjuna" style="margin-right: 8px;" src="https://raw.githubusercontent.com/arjuna-chatbot/arjuna/main/assets/arjuna.svg" width="25" /> License</h2>
 
