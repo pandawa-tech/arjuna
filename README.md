@@ -33,7 +33,7 @@ There are 2 ways to get Arjuna up and running:
 
   Build the image
   ```shell
-    docker build -t arjuna .
+    docker build -f Dockerfile.production -t arjuna .
   ```
   Run image using 'start' script
   ```shell
