@@ -1,8 +1,9 @@
 name: Deploy Github Packages
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - feature/test-container-registry
 
 jobs:
   push_to_registry:
