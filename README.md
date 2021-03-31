@@ -11,8 +11,6 @@
   </a>
 
   <img alt="Code Factor" src="https://www.codefactor.io/repository/github/arjuna-chatbot/arjuna/badge">
-
-  <img alt="dependencies" src="https://status.david-dm.org/gh/arjuna-chatbot/arjuna.svg">
 </p>
 <h1 align="center">
   Arjuna
