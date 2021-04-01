@@ -63,3 +63,5 @@ typings/
 .env
 
 .sessions
+
+coverage.out
