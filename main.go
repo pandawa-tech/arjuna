@@ -13,8 +13,19 @@ import (
 
 var bot *linebot.Client
 
+func getEnv(key, fallback string) string {
+    if value, ok := os.LookupEnv(key); ok {
+        return value
+    }
+    return fallback
+}
+
 func defaultHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Hi there, I love you!")
+}
+
+func healthCheckHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Healthy")
 }
 
 func lineHandler(w http.ResponseWriter, r *http.Request) {
@@ -58,13 +69,18 @@ func main() {
     if error != nil {
         log.Println(error)
 	}
+    port := getEnv("PORT", "8080")
     bot, err = linebot.New(os.Getenv("LINE_CHANNEL_SECRET"), os.Getenv("LINE_ACCESS_TOKEN"))
     if err != nil {
         log.Println(err)
 		log.Fatal("Failed initialize line chatbot")
 	}
-	fmt.Fprintf(os.Stdout, "Web Server started. Listening on port 8080\n")
     http.HandleFunc("/webhooks/line", lineHandler)
+    http.HandleFunc("/healthcheck", healthCheckHandler)
     http.HandleFunc("/", defaultHandler)
-    log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Print("Listening on port " + port + " ... ")
+    err = http.ListenAndServe(":" + port, nil)
+    if err != nil {
+		log.Fatal("ListenAndServe error: ", err)
+	}
 }
