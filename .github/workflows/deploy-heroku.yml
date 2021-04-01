@@ -25,6 +25,9 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           usedocker: true
+          healthcheck: https://${{secrets.HEROKU_APP_NAME}}.herokuapp.com/healthcheck
+          delay: 5
+          rollbackonhealthcheckfailed: true
           docker_build_args: |
             LINE_ACCESS_TOKEN
             LINE_CHANNEL_SECRET
