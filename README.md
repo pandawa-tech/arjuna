@@ -9,6 +9,10 @@
   <img alt="Workflow" src="https://github.com/arjuna-chatbot/arjuna/actions/workflows/deploy-heroku.yml/badge.svg">
   </a>
   <img alt="Code Factor" src="https://www.codefactor.io/repository/github/arjuna-chatbot/arjuna/badge">
+  <a href="https://codecov.io/gh/priambudiLB/arjuna">
+    <img src="https://codecov.io/gh/priambudiLB/arjuna/branch/main/graph/badge.svg?token=hHLOJTSEih"/>
+  </a>
+    
 </p>
 <h1 align="center">
   Arjuna
