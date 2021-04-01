@@ -57,7 +57,6 @@ func main() {
     error := godotenv.Load(".env")
     if error != nil {
         log.Println(error)
-		log.Fatal("Failed to load .env")
 	}
     bot, err = linebot.New(os.Getenv("LINE_CHANNEL_SECRET"), os.Getenv("LINE_ACCESS_TOKEN"))
     if err != nil {

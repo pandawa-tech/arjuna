@@ -31,11 +31,11 @@ There are 2 ways to get Arjuna up and running:
 
   Build the image
   ```shell
-    docker build -f Dockerfile.production -t arjuna .
+    docker build -t arjuna .
   ```
-  Run image using 'start' script
+  Run image
   ```shell
-    docker run arjuna
+    docker run -p 8080:8080 arjuna
   ```
   
 
@@ -51,3 +51,4 @@ There are 2 ways to get Arjuna up and running:
 Licensed under the [MIT License](./LICENSE).
 
 <a href="https://www.vecteezy.com/free-vector/decorative">Logo vector by Vecteezy</a>
+
