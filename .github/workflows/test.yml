@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 jobs:
   test:
@@ -16,6 +19,7 @@ jobs:
       - name: Run coverage
         run: go test -race -coverprofile=coverage.out -covermode=atomic
       - name: Upload coverage to Codecov
+        if: github.ref == 'refs/heads/main'
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
